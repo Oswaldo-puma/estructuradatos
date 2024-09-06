@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define FILAS 6
+#define COLUMNAS 4
+
+
+void Portada(){
+	printf("\t\tRecorrido de Matrices\n");
+	printf("\tIntegrantes\n");
+	printf("Oswaldo Diaz Diaz\n");
+	printf("Lopez Blanca Tania\n");
+	system("pause");
+	system("cls");
+}
+// Función para imprimir de forma secuencial la matriz
+void muestra(int matriz[FILAS][COLUMNAS]) {
+    printf("\nImpresion de la matriz en secuencia (de izquierda a derecha, de arriba hacia abajo):\n");
+    for (int i = 0; i < FILAS; i++) {
+        for (int j = 0; j < COLUMNAS; j++) {
+            printf("%d ", matriz[i][j]);
+        }
+    }
+}
+
+int main() {
+	Portada ();
+    // Matriz predefinida
+    int matriz[FILAS][COLUMNAS] = {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12},
+        {13, 14, 15, 16},
+        {17, 18, 19, 20},
+        {21, 22, 23, 24}
+    };
+
+    // Llamada a la función para imprimir la matriz en secuencia
+    muestra(matriz);
+
+    return 0;
+}
